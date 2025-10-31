@@ -82,6 +82,7 @@ public class LoginPageDefinitions {
     public void muestraTodosLosProductos() {
         // theActorInTheSpotlight().should(seeThat(ProductoNoEncontrado.campoVacio()));
         theActorInTheSpotlight().should(seeThat(MasProductos.hayMas()));
+        //probando los commit en git
     }
 
 }
