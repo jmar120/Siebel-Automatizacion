@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/search/ProductosYServicios.feature"
         ,glue = "testing/stepdefinitions"
         ,snippets = CucumberOptions.SnippetType.CAMELCASE
-        ,tags = "@BusquedaDeProductosSinProducto"
+        ,tags = "@RelacionadosDeProducto"
 )
 public class CucumberTestSuiteTest {}
 

@@ -41,6 +41,15 @@ Feature: Busqueda de Productos
     And Se da click en Buscar el producto
     Then Muestra todos los productos
 
+  @RelacionadosDeProducto
+  Scenario: Relacionados de producto
+    Given "User" abre la página web
+    When Inicia sesión con las credenciales "jmar120" y "AGTsiebel_25"
+    And Ingresa al modulo de producto
+    And Busca el producto "0049202724"
+    And Da click en el producto "0049202724"
+    Then Muestra el cliente con numero "19902736"
+
 #📄 Documentación Archivo: LoginPage.feature
 #
 #📌 Descripción General:

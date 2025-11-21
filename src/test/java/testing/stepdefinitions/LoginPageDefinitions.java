@@ -4,15 +4,8 @@ package testing.stepdefinitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
-import testing.questions.ErrorLogin;
-import testing.questions.ProductoExitoso;
-import testing.questions.ProductoNoEncontrado;
-import testing.questions.SuccessLogin;
-import testing.questions.MasProductos;
-import testing.tasks.Login;
-import testing.tasks.PaginaInicio;
-import testing.tasks.ProductosYServicios;
-import testing.tasks.Productos;
+import testing.questions.*;
+import testing.tasks.*;
 import testing.utils.AceptarAlertaProductoCaracteresEspeciales;
 import testing.utils.AceptarAlertaSiExiste;
 
@@ -83,6 +76,17 @@ public class LoginPageDefinitions {
         // theActorInTheSpotlight().should(seeThat(ProductoNoEncontrado.campoVacio()));
         theActorInTheSpotlight().should(seeThat(MasProductos.hayMas()));
         //probando los commit en git
+    }
+
+    @When("Da click en el producto {string}")
+    public void daClickEnElProducto(String enlace) {
+        // Write code here that turns the phrase above into concrete actions
+       OnStage.withCurrentActor(ProductoDatos.darclickenlace(enlace));
+    }
+    @Then("Muestra el cliente con numero {string}")
+    public void muestraElClienteConNumero(String string) {
+        // Write code here that turns the phrase above into concrete actions
+        theActorInTheSpotlight().should(seeThat(RelacionadoExitoso.relacionadoEncontrado()));
     }
 
 }
